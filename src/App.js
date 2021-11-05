@@ -6,13 +6,13 @@ class App extends Component {
 
   state = {
     baseurl: process.env.REACT_APP_BASEURL,
-    search: '',
-    endPoint: ''
+    searchTitle: 'starships',
+    searchUrl: ''
   }
 
   componentDidMount(){
     
-    swServices.getAllStarShips(this.state.baseurl)
+    swServices.getAllStarShips(this.state.baseurl + this.state.searchTitle)
     .then(starships => this.setState({
       starships
     }))
@@ -22,9 +22,21 @@ class App extends Component {
   render(){
     console.log(this.state.starships)
     return (
+
       <div className="App">
-        hello
+        {
+        this.state.starships ? 
+          
+          this.state.starships.map((ship, ind) => (
+            <p key={ind}>{ship.name}</p>
+          ))
+          
+          :
+
+          ''
+        }
       </div>
+
     );    
   }
 
