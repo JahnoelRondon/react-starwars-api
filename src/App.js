@@ -11,12 +11,16 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log(this.state.baseurl)
     
     swServices.getAllStarShips(this.state.baseurl)
+    .then(starships => this.setState({
+      starships
+    }))
+
   }
 
   render(){
+    console.log(this.state.starships)
     return (
       <div className="App">
         hello
