@@ -1,3 +1,8 @@
+* {
+  text-decoration: none;
+  color: white;
+}
+
 .shipContainer {
   display: flex;
   flex-wrap: wrap;
@@ -7,7 +12,11 @@
 }
 
 .ships {
-  background-color: green;
+  background-color: rgb(2, 93, 66);
   padding: 20px;
   margin: 10px;
+}
+
+.ships:hover {
+  background-color: rgb(0, 121, 84);
 }

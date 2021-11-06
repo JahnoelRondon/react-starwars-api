@@ -2,11 +2,12 @@ import './App.css';
 import React, {Component} from 'react'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
 
+import Detail from './pages/Detail'
 import * as swServices from './services/sw-api'
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
     
     return (
     <Router>
+      {/* put this container in a component for the route to "/" */}
       <div className="shipContainer">
 
         {
@@ -38,13 +40,17 @@ class App extends Component {
           
           this.state.starships.map((ship, ind) => (
 
-            <p className='ships' key={ind}>{ship.name}</p>
+            <Link to='/shipDetail' className='ships' key={ind}>{ship.name}</Link>
           ))
           
           :
 
           ''
         }
+
+        <Routes>
+          <Route path='/shipDetail' element={<Detail />}/>
+        </Routes>
 
       </div>
     </Router>
