@@ -31,7 +31,7 @@ class App extends Component {
     console.log(this.state.starships)
     
     return (
-    <Router>
+      <>
       {/* put this container in a component for the route to "/" */}
       <div className="shipContainer">
 
@@ -48,12 +48,12 @@ class App extends Component {
           ''
         }
 
+        </div>
+
         <Routes>
           <Route path='/shipDetail' element={<Detail />}/>
-        </Routes>
-
-      </div>
-    </Router>
+        </Routes> 
+        </>
     );    
   }
 

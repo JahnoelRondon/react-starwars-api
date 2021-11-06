@@ -3,10 +3,13 @@
   color: white;
 }
 
+body {
+  background-color: black;
+}
+
 .shipContainer {
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
   width: 90%;
   margin: 0 auto;
 }
