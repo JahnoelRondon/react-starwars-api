@@ -14,7 +14,7 @@
 }
 
 .navbar a {
-  font-size: 6vh;
+  font-size: 3vw;
   letter-spacing: 2px;
 }
 
@@ -42,3 +42,17 @@ body {
 
 
 /* ---------------------DETAIL PAGE */
+
+.detail {
+  width: 80%;
+  background-color: rgb(53, 53, 53);
+  margin: 0 auto;
+}
+
+.detail p {
+
+}
+
+.detail span {
+  font-weight: bold;
+}
