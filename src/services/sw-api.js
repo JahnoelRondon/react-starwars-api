@@ -1,7 +1,8 @@
+const baseurl = process.env.REACT_APP_BASEURL;
 
-export function getAllStarShips(endpoint){
+export function getAllStarShips(){
     return (
-        fetch(endpoint)
+        fetch(`${baseurl}/starships`)
         .then(res => res.json())
         .then(json => json.results)        
     )

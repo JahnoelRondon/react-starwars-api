@@ -1,16 +1,43 @@
 import {Link} from 'react-router-dom'
+import React, {Component} from 'react'
+import * as swServices from './../services/sw-api'
+// add base url
 
-function Home({starships}){
-    return (
-        <div className="shipContainer">
-        {
-          starships.map((ship, ind) => (
+class Home extends Component{
 
-            <Link to='/shipDetail' className='ships' key={ind}>{ship.name}</Link>
-          ))
-        }
-        </div>
-    )
+  state = {
+    starships: []
+  }
+
+  componentDidMount(){
+    console.log('home did mount');
+
+    swServices.getAllStarShips()
+    .then(starships => this.setState({
+      starships
+    }))
+
+  }
+
+  render(){
+    console.log(this.state.starships);
+      return (
+          <div className="shipContainer">
+          {
+            this.state.starships.map((ship, ind) => (
+
+              <Link className='ships' key={ind} 
+              to='shipDetail'
+              state={{ship}}
+              >
+              {ship.name}</Link>
+            ))
+          }
+          </div>
+      )    
+  }
+
+
 }
 
 export default Home
