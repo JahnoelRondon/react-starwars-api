@@ -15,7 +15,11 @@
 
 .navbar a {
   font-size: 3vw;
-  letter-spacing: 2px;
+  letter-spacing: 20px;
+}
+
+.navbar a:hover {
+  color: yellow;
 }
 
 body {
@@ -45,14 +49,27 @@ body {
 
 .detail {
   width: 80%;
-  background-color: rgb(53, 53, 53);
   margin: 0 auto;
+  text-align: center;
+  padding: 10px;
 }
 
 .detail p {
-
+  font-size: 1vw;
+  letter-spacing: 2px;
 }
 
 .detail span {
+  font-size: 1.4vw;
   font-weight: bold;
+}
+
+.detail a {
+  text-decoration: underline;
+}
+
+
+/* hovers */
+.detail a:hover {
+  color: yellow;
 }
