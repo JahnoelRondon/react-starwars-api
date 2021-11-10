@@ -1,4 +1,4 @@
-const baseurl = process.env.REACT_APP_BASEURL;
+const baseurl = process.env.REACT_APP_BASEURL || 'https://swapi.dev/api/';
 
 export function getAllStarShips(){
     return (
