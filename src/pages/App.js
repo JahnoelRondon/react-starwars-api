@@ -12,7 +12,7 @@ import Nav from './../components/Nav';
 class App extends Component {
 
   state = {
-    baseurl: process.env.REACT_APP_BASEURL
+    baseurl: 'https://swapi.dev/api/'
   }
 
   render(){
