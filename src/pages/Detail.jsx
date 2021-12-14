@@ -3,6 +3,7 @@ import { useLocation } from "react-router"
 function Detail(){
     let ship = useLocation().state.ship;
 
+
     return(
         <div className='detail'>
             <h1>{ship.name}</h1>

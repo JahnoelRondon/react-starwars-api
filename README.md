@@ -1,1 +1,1 @@
-simple app to look at Star war ships info
+simple app to look at Star war ships info with starwars api and React.
